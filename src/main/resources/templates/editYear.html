@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>gsia-editYear</title>
+</head>
+
+<body>
+	<h2>
+		New design for <span th:text="${anno.id}"></span>
+	</h2>
+	<form method="POST" th:object="${anno}">
+		<div>
+			This year's focus:
+			<input type="text" name="focus" th:value="${anno.focus}" />
+		</div>
+		<input type="submit" />
+	</form>
+</body>
+</html>
