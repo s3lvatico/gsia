@@ -24,11 +24,12 @@ public class GsiaApplicationTests {
 	public void contextLoads() {
 	}
 	
-	@Test public void testHomePage() throws Exception {
+	@Test 
+	public void testHomePage() throws Exception {
 		mockMvc.perform(get("/"))
 		.andExpect(status().isOk())
 		.andExpect(view().name("home"))
-		.andExpect(content().string(containsString("")));
+		.andExpect(content().string(containsString("gsia-home")));
 	}
 
 }
