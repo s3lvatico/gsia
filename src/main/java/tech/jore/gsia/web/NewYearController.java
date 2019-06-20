@@ -26,7 +26,7 @@ public class NewYearController {
 
 	@PostMapping
 	public String processNewYear(Anno anno) {
-		log.debug("the proecessed Anno : {}", anno);
-		return "home";
+		log.debug("the processed Anno : {}", anno);
+		return "redirect:/home";
 	}
 }
