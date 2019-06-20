@@ -16,35 +16,40 @@
 			<div>
 				<h3>Designate your wrap:</h3>
 				<div th:each="ingredient : ${wrap}">
-					<input name="ingredients" type="checkbox" th:value="${ingredient.id}" /> <span th:text="${ingredient.name}">INGREDIENT</span><br />
+					<input type="checkbox" name="ingredients" th:value="${ingredient.id}" th:id="${ingredient.id}"/>
+					<label th:text="${ingredient.name}" th:for="${ingredient.id}"></label>
 				</div>
 			</div>
 
 			<div>
 				<h3>Pick your protein:</h3>
 				<div th:each="ingredient : ${protein}">
-					<input name="ingredients" type="checkbox" th:value="${ingredient.id}" /> <span th:text="${ingredient.name}">INGREDIENT</span><br />
+					<input type="checkbox" name="ingredients" th:value="${ingredient.id}" th:id="${ingredient.id}"/>
+					<label th:text="${ingredient.name}" th:for="${ingredient.id}"></label>
 				</div>
 			</div>
 
 			<div>
 				<h3>Choose your cheese:</h3>
 				<div th:each="ingredient : ${cheese}">
-					<input name="ingredients" type="checkbox" th:value="${ingredient.id}" /> <span th:text="${ingredient.name}">INGREDIENT</span><br />
+					<input type="checkbox" name="ingredients" th:value="${ingredient.id}" th:id="${ingredient.id}"/>
+					<label th:text="${ingredient.name}" th:for="${ingredient.id}"></label>
 				</div>
 			</div>
 
 			<div>
 				<h3>Determine your veggies:</h3>
-				<div th:each="ingredient : ${veggies}">
-					<input name="ingredients" type="checkbox" th:value="${ingredient.id}" /> <span th:text="${ingredient.name}">INGREDIENT</span><br />
+				<div th:each="ingredient : ${veggie}">
+					<input type="checkbox" name="ingredients" th:value="${ingredient.id}" th:id="${ingredient.id}"/>
+					<label th:text="${ingredient.name}" th:for="${ingredient.id}"></label>
 				</div>
 			</div>
 
 			<div>
 				<h3>Select your sauce:</h3>
 				<div th:each="ingredient : ${sauce}">
-					<input name="ingredients" type="checkbox" th:value="${ingredient.id}" /> <span th:text="${ingredient.name}">INGREDIENT</span><br />
+					<input type="checkbox" name="ingredients" th:value="${ingredient.id}" th:id="${ingredient.id}"/>
+					<label th:text="${ingredient.name}" th:for="${ingredient.id}"></label>
 				</div>
 			</div>
 		</div>
@@ -52,7 +57,7 @@
 		<div>
 
 
-			<h3>Name your taco creation:</h3>
+			<h3>Da' un nome alla torta:</h3>
 			<input type="text" th:field="*{name}" /> <span th:text="${#fields.hasErrors('name')}">XXX</span> <span class="validationError"
 				th:if="${#fields.hasErrors('name')}" th:errors="*{name}">Name Error</span> <br />
 

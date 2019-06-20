@@ -41,7 +41,7 @@ public class DesignTortaController {
 		log.debug("internal repository generated");
 
 		for (Type type : Type.values()) {
-			model.addAttribute(type.name(), filterByType(ingredients, type));
+			model.addAttribute(type.name().toLowerCase(), filterByType(ingredients, type));
 		}
 		model.addAttribute("design", new Torta());
 		
