@@ -8,5 +8,5 @@ import lombok.Data;
 public class Torta {
 
 	private String name;
-	private List<Ingredient> ingredients;
+	private List<String> ingredients;
 }
