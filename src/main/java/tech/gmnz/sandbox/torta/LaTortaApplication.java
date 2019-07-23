@@ -1,13 +1,13 @@
-package tech.jore.gsia;
+package tech.gmnz.sandbox.torta;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class GsiaApplication {
+public class LaTortaApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(GsiaApplication.class, args);
+		SpringApplication.run(LaTortaApplication.class, args);
 	}
 
 }
