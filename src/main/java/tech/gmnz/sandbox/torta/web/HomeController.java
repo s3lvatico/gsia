@@ -1,4 +1,4 @@
-package tech.gmnz.sandbox.torta;
+package tech.gmnz.sandbox.torta.web;
 
 
 import org.springframework.stereotype.Controller;
