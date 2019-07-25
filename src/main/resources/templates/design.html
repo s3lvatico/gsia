@@ -8,8 +8,8 @@
 	<h2>design</h2>
 	<form method="POST" th:object="${design}">
 		<h3>Che torta?</h3>
-		<div th:each="ingredient : ${torta}">
-			<input name="ingredients" type="checkbox" th:value="${ingredient.id}" /> <span th:text="${ingredient.name}">INGREDIENT.NAME</span>
+		<div th:each="ingredient,iter : ${torta}">
+			<input th:id="'q-' + ${iter.index}" name="ingredients" type="checkbox" th:value="${ingredient.id}" /> <span th:text="${ingredient.name}">INGREDIENT.NAME</span>
 		</div>
 		<h3>'L dentro</h3>
 		<div th:each="ingredient : ${proteine}">

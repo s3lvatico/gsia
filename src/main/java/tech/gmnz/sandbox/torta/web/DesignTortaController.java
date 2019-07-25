@@ -36,20 +36,22 @@ public class DesignTortaController {
 				new Ingredient("GORG", "Gorgonzola", Type.FORMAGGIO),
 				new Ingredient("PECR", "Pecorino", Type.FORMAGGIO)
 		);
-
+		
+		log.warn("dummy data repository created with {} elements", ingredients.size());
+		
 		for (Type t : Type.values()) {
 			model.addAttribute(t.toString().toLowerCase(), filterByType(ingredients, t));
 		}
-		
+
 		model.addAttribute("design", new Torta());
-		
+
 		return "design";
 	}
-	
+
+
+
+
 	private List<Ingredient> filterByType(List<Ingredient> list, Type type) {
-		return list
-				.stream()
-				.filter(x -> x.getType().equals(type))
-				.collect(Collectors.toList());
+		return list.stream().filter(x -> x.getType().equals(type)).collect(Collectors.toList());
 	}
 }
