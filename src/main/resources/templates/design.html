@@ -9,24 +9,30 @@
 	<form method="POST" th:object="${design}">
 		<h3>Che torta?</h3>
 		<div th:each="ingredient,iter : ${torta}">
-			<input th:id="'q-' + ${iter.index}" name="ingredients" type="checkbox" th:value="${ingredient.id}" /> <span th:text="${ingredient.name}">INGREDIENT.NAME</span>
+			<input th:id="'ingr-' + ${iter.index}" name="ingredients" type="checkbox" th:value="${ingredient.id}" />
+			<!-- <span th:text="${ingredient.name}">INGREDIENT.NAME</span>  -->
+			<label th:for="'ingr-' + ${iter.index}" th:text="${ingredient.name}">BUBU</label>
 		</div>
 		<h3>'L dentro</h3>
 		<div th:each="ingredient : ${proteine}">
-			<input name="ingredients" type="checkbox" th:value="${ingredient.id}" /> <span th:text="${ingredient.name}">INGREDIENT.NAME</span>
+			<input name="ingredients" type="checkbox" th:value="${ingredient.id}" />
+			<span th:text="${ingredient.name}">INGREDIENT.NAME</span>
 		</div>
 		<h3>Vegetali</h3>
 		<div th:each="ingredient : ${vegetali}">
-			<input name="ingredients" type="checkbox" th:value="${ingredient.id}" /> <span th:text="${ingredient.name}">INGREDIENT.NAME</span>
+			<input name="ingredients" type="checkbox" th:value="${ingredient.id}" />
+			<span th:text="${ingredient.name}">INGREDIENT.NAME</span>
 		</div>
 		<h3>Formaggio l' vole?</h3>
 		<div th:each="ingredient : ${formaggio}">
-			<input name="ingredients" type="checkbox" th:value="${ingredient.id}" /> <span th:text="${ingredient.name}">INGREDIENT.NAME</span>
+			<input name="ingredients" type="checkbox" th:value="${ingredient.id}" />
+			<span th:text="${ingredient.name}">INGREDIENT.NAME</span>
 		</div>
 
 		<div>
 			<h3>Dai un nome alla tua torta</h3>
-			<input type="text" th:field="*{name}" /> <br />
+			<input type="text" th:field="*{name}" />
+			<br />
 
 			<button>invia</button>
 		</div>
